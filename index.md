@@ -34,21 +34,21 @@ The project focused on local network multiplayer and explored different approach
 
 ---
 
-## AI Football Simulation
+## 2v2 Football AI Simulation
 
-**Unity | C# | Game AI**
+**C# | MonoGame | Game AI**
 
-A football simulation featuring autonomous agents designed to react to the current state of the match.
+A 2v2 football simulation built using MonoGame, focused on autonomous
+agent behaviour and hierarchical team decision-making.
 
-### What I worked on
-- Finite state machines
-- Steering behaviours
-- Predictive movement
-- Agent decision making
-- Football-specific gameplay behaviour
-
-### Technical areas
-`C#` `Unity` `Finite State Machines` `Steering Behaviours`
+### What I implemented
+- Designed finite state machines for individual football agents
+- Implemented player roles including dribbling, tackling, guarding and sweeper-keeping
+- Developed team-level attacking and defending states
+- Dynamically assigned player roles based on the position and state of the ball
+- Used steering behaviours to control autonomous agent movement
+- Implemented collision handling between gameplay entities
+- Structured AI using separate agent, team, state and transition systems
 
 
 ---
