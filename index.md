@@ -123,6 +123,33 @@ Experience developing games and underlying engine systems using MonoGame, workin
 - Developed autonomous agent movement using steering behaviours
 - Worked directly with input handling, rendering and game-state logic
 
+### OpenGL / Game Architecture
+
+Experience designing lower-level game systems and reusable engine architecture.
+
+- Designed and implemented an Entity Component System (ECS)
+- Built entity and system managers
+- Implemented collision detection and response
+- Developed scene and resource management systems
+- Implemented navigation meshes and A* pathfinding
+- Built rendering, shader, camera and audio systems
+- Separated engine-level and game-specific logic
+
+### OpenGL / Real-Time Graphics
+
+Experience implementing graphics and rendering systems directly using OpenGL/OpenTK.
+
+- Implemented custom vector and matrix maths
+- Built translation, rotation and scaling transformations
+- Implemented matrix-vector and matrix-matrix multiplication
+- Generated primitive geometry procedurally
+- Worked with VAOs, VBOs and EBOs
+- Implemented indexed and non-indexed rendering
+- Used vertex and fragment shaders
+- Applied texture coordinates and model transformations
+- Built hierarchical scene graphs with recursive rendering
+- Used the Visitor pattern to process scene-graph nodes
+
 ## Unity
 
 Experience developing gameplay systems and interactive applications across multiplayer, VR and general game-development projects.
