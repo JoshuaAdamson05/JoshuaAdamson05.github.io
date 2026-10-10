@@ -123,7 +123,7 @@ Experience developing games and underlying engine systems using MonoGame, workin
 - Developed autonomous agent movement using steering behaviours
 - Worked directly with input handling, rendering and game-state logic
 
-### OpenGL / Game Architecture
+## OpenGL / Game Architecture
 
 Experience designing lower-level game systems and reusable engine architecture.
 
@@ -135,7 +135,7 @@ Experience designing lower-level game systems and reusable engine architecture.
 - Built rendering, shader, camera and audio systems
 - Separated engine-level and game-specific logic
 
-### OpenGL / Real-Time Graphics
+## OpenGL / Real-Time Graphics
 
 Experience implementing graphics and rendering systems directly using OpenGL/OpenTK.
 
