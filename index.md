@@ -116,6 +116,20 @@ I am currently continuing to develop my C++ skills through my final-year studies
 - A* and Dijkstra's algorithm
 
 ### Game Development
+
+**MonoGame / Engine Development**
+
+Experience developing games and underlying engine systems using MonoGame, working at a lower level than full game engines such as Unity.
+
+- Designed and implemented custom entity systems
+- Developed collision detection and collision response systems
+- Implemented game loops and update/draw architecture
+- Managed entity updating and rendering
+- Built reusable systems for game objects and gameplay behaviour
+- Implemented finite state machine and behaviour systems
+- Developed autonomous agent movement using steering behaviours
+- Worked directly with input, rendering and game-state logic
+
 **Unity**
 - Gameplay systems
 - Multiplayer networking
