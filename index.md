@@ -95,26 +95,52 @@ I am currently continuing to develop my C++ skills through my final-year studies
 
 ---
 
-# Skills
+# Technical Skills
 
 ### Programming Languages
-- C++
-- C#
-- Python
+**C++**
+- Object-oriented programming
+- Pointers and references
+- Dynamic memory management
+- STL containers
+- Classes and inheritance
+
+**C#**
+- Gameplay scripting in Unity
+- Object-oriented programming
+- Networking systems
+- UI and interaction logic
+
+**Python**
+- Pathfinding and algorithm implementation
+- A* and Dijkstra's algorithm
 
 ### Game Development
-- Unity
-- Gameplay Programming
-- Multiplayer Networking
-- Virtual Reality / XR
-- Game AI
+**Unity**
+- Gameplay systems
+- Multiplayer networking
+- Physics-based interaction
+- VR / XR development
+- UI systems
+- Performance profiling
 
-### Tools
-- Git
-- GitHub
+**Networking**
+- Client-server architecture
+- LAN discovery using UDP broadcasting
+- Lobby and ready systems
+- Network authority approaches
+- Latency and bandwidth profiling
+
+**Gameplay / AI**
+- Finite state machines
+- Steering behaviours
+- Predictive movement
+- Gameplay logic
+
+### Development Tools
+- Git and GitHub
 - Visual Studio
-
----
+- Unity Profiler
 
 # About Me
 
