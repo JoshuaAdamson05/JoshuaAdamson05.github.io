@@ -115,46 +115,73 @@ I am currently continuing to develop my C++ skills through my final-year studies
 - Pathfinding and algorithm implementation
 - A* and Dijkstra's algorithm
 
-### Game Development
+## Game Development
 
-**MonoGame / Engine Development**
+### MonoGame / Engine Development
 
 Experience developing games and underlying engine systems using MonoGame, working at a lower level than full game engines such as Unity.
 
 - Designed and implemented custom entity systems
 - Developed collision detection and collision response systems
-- Implemented game loops and update/draw architecture
-- Managed entity updating and rendering
+- Implemented game-loop and update/draw architecture
+- Managed entity lifecycle, updating and rendering
 - Built reusable systems for game objects and gameplay behaviour
 - Implemented finite state machine and behaviour systems
 - Developed autonomous agent movement using steering behaviours
-- Worked directly with input, rendering and game-state logic
+- Worked directly with input handling, rendering and game-state logic
 
-**Unity**
-- Gameplay systems
-- Multiplayer networking
-- Physics-based interaction
-- VR / XR development
-- UI systems
-- Performance profiling
+### Unity
 
-**Networking**
-- Client-server architecture
-- LAN discovery using UDP broadcasting
-- Lobby and ready systems
-- Network authority approaches
-- Latency and bandwidth profiling
+Experience developing gameplay systems and interactive applications in Unity across multiplayer, VR and general game-development projects.
 
-**Gameplay / AI**
-- Finite state machines
-- Steering behaviours
-- Predictive movement
-- Gameplay logic
+- Developed gameplay mechanics and supporting game systems
+- Implemented multiplayer features using Unity networking technologies
+- Built physics-based interactions and gameplay behaviour
+- Developed VR / XR interaction systems, including grabbing, throwing and haptic feedback
+- Created user interfaces and gameplay UI
+- Used Unity Profiler to investigate runtime performance and resource usage
 
-### Development Tools
-- Git and GitHub
-- Visual Studio
+### Multiplayer Networking
+
+Experience developing and evaluating networking systems for local multiplayer games.
+
+- Implemented client-server multiplayer architecture
+- Developed LAN host discovery using UDP broadcasting
+- Built multiplayer lobby and ready-up systems
+- Implemented synchronised multiplayer gameplay
+- Experimented with different network authority approaches
+- Analysed latency, bandwidth usage and runtime performance
+- Considered responsiveness and consistency when designing networked systems
+
+### Gameplay AI
+
+Experience implementing autonomous game-agent behaviour using state-based and movement systems.
+
+- Designed finite state machines for autonomous agents
+- Implemented state transitions based on changing gameplay conditions
+- Developed steering behaviours for autonomous movement
+- Implemented predictive movement and target selection
+- Built individual and team-level decision-making systems
+- Used behavioural logic to assign and change agent roles dynamically
+
+## Development Tools & Workflow
+
+### Git / GitHub
+- Source control and version management
+- Repository management
+- Branching and commits
+- GitHub Classroom and collaborative project workflows
+
+### Visual Studio
+- C++ and C# development
+- Debugging and breakpoint-based testing
+- Project and solution management
+
+### Profiling & Debugging
 - Unity Profiler
+- Runtime performance analysis
+- Network performance monitoring
+- Debugging gameplay and systems behaviour
 
 # About Me
 
