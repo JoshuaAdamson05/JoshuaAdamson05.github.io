@@ -2,224 +2,280 @@
 
 ## Graduate Games Programmer
 
-Final-year Computer Science student with experience in C++, C#, Unity and MonoGame, with a particular focus on gameplay programming, multiplayer networking, game AI and virtual reality.
+### About Me
 
-I am seeking graduate programming roles within the games industry where I can apply and continue developing my technical skills across gameplay and systems programming.
+I am a fourth-year MEng Computer Science student at the University of Hull, currently in my final year and working towards a career as a games programmer.
 
-[GitHub](https://github.com/JoshuaAdamson05)
+My projects have given me experience across multiplayer networking, gameplay AI, game architecture, parallel programming, real-time graphics, virtual reality and mixed reality. I particularly enjoy technical gameplay and systems work, including problems involving performance, architecture and player responsiveness.
+
+I am currently continuing to develop my C++ and lower-level programming experience through combined final-year work in C++ Programming and Design and Real-Time Graphics using Vulkan 1.3, alongside team-based commercial development practice.
+
+**GitHub:** [JoshuaAdamson05](https://github.com/JoshuaAdamson05)  
+**Email:** [joshada05@hotmail.com](mailto:joshada05@hotmail.com)
 
 ---
 
-# Projects
+# Featured Projects
 
 ## Local Networked Table Football
 
-**Unity | C# | Multiplayer Networking**
+**Unity · C# · Multiplayer Networking**
 
-A 2D top-down multiplayer football game developed as my Honours project, focused on LAN multiplayer, network architecture and responsive gameplay.
+![Local Networked Table Football gameplay](assets/images/table-football-gameplay.gif)
 
-### What I implemented
-- Developed LAN host discovery using UDP broadcasting
-- Implemented client-server multiplayer architecture
-- Built lobby and ready-up systems
-- Implemented networked player movement and gameplay
-- Experimented with different network authority models to compare responsiveness and consistency
-- Profiled network performance, including latency and bandwidth usage
+A 2D LAN multiplayer table-football game developed as my individual Honours project, focused on responsive gameplay networking and synchronisation.
 
-### Technical Areas
-`C#` `Unity` `Netcode for GameObjects` `Unity Transport` `UDP` `Client-Server Networking`
+### Highlights
+
+- Custom **30 Hz tick-based networking system**
+- Client prediction and server reconciliation
+- Snapshot interpolation and bounded extrapolation
+- UDP LAN host discovery
+- Server- and client-authoritative movement modes
+- Runtime networking and synchronisation metrics
+
+---
+
+## Parallel Particle Simulation — Rust CPU vs CUDA GPU
+
+**Rust · C++ · CUDA · OpenGL · Parallel Programming**
+
+| Rust CPU | CUDA GPU |
+| --- | --- |
+| ![Rust particle simulation](assets/images/rust-particle-simulation.gif) | ![CUDA particle simulation](assets/images/cuda-particle-simulation.gif) |
+
+Two implementations of the same particle shower simulation, developed to compare CPU multithreading with massively parallel GPU processing.
+
+Both versions simulate large particle populations with physics, temperature behaviour, spatially partitioned collision detection and particle merging.
+
+### Highlights
+
+- Multithreaded CPU simulation implemented in Rust
+- GPU simulation implemented using C++ and CUDA
+- Spatial-grid collision detection
+- Parallel particle collision and merge processing
+- Profiling and optimisation of individual simulation stages
+
+### Performance
+
+| Implementation | Hardware | 500,000-particle simulation |
+| --- | --- | ---: |
+| Rust CPU | Intel Core i5-13600KF | ~41.6 ms |
+| CUDA GPU | NVIDIA RTX 4070 Ti | ~0.93 ms |
 
 ---
 
 ## 2v2 Football AI Simulation
 
-**C# | MonoGame | Game AI**
+**C# · MonoGame · Game AI**
 
-A 2v2 football simulation developed using MonoGame, focused on autonomous agent behaviour and hierarchical team decision-making.
+<video autoplay loop muted playsinline preload="metadata" poster="assets/images/football-ai-poster.jpg" style="width:100%; height:auto;">
+  <source src="assets/videos/football-ai.mp4" type="video/mp4">
+</video>
 
-### What I implemented
-- Designed finite state machines for individual football agents
-- Implemented player roles including dribbling, tackling, guarding and sweeper-keeping
-- Developed team-level attacking and defending states
-- Dynamically assigned player roles based on the position and state of the ball
-- Used steering behaviours to control autonomous agent movement
-- Implemented collision handling between gameplay entities
-- Structured the AI using separate agent, team, state and transition systems
+An autonomous 2v2 football simulation focused on individual agent behaviour and team-level decision-making.
 
-### Technical Areas
-`C#` `MonoGame` `Finite State Machines` `Steering Behaviours` `Game AI` `Collision Handling`
+### Highlights
+
+- Finite state machines for autonomous agents
+- Team-level attacking and defending states
+- Dynamic assignment of player roles
+- Steering behaviours for autonomous movement
+- Roles including dribbling, tackling, guarding and sweeper-keeping
+
+---
+
+## Games Architecture
+
+**C# · OpenTK · OpenGL · Game Systems**
+
+<table>
+  <tr>
+    <th>Drone Combat</th>
+    <th>High-Score Submission &amp; Retrieval</th>
+  </tr>
+  <tr>
+    <td>
+      <video autoplay loop muted playsinline preload="metadata" poster="assets/images/games-architecture-poster.jpg" style="width:100%; height:auto;">
+        <source src="assets/videos/games-architecture.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td><img src="assets/images/games-architecture-high-score.gif" alt="Games Architecture high-score submission and retrieval" style="width:100%; height:auto;"></td>
+  </tr>
+</table>
+
+A game architecture project centred around a small drone-combat game, focused on designing reusable engine systems for gameplay, rendering and game-world management.
+
+### Highlights
+
+- Designed and implemented an **Entity Component System**
+- Implemented collision detection and response systems
+- Developed navigation meshes with **A\* pathfinding** for autonomous agents
+- Built a **scene-management system** with scene transitions and shared transition data
+- Developed an asynchronous **TCP high-score client/server** with JSON persistence
+- Built resource management for geometry, textures, shaders and audio
+- Separated reusable engine-level systems from game-specific behaviour
+
+---
+
+## Real-Time Graphics — OpenGL
+
+**C# · OpenTK · OpenGL · GLSL**
+
+<video autoplay loop muted playsinline preload="metadata" poster="assets/images/opengl-stadium-poster.jpg" style="width:100%; height:auto;">
+  <source src="assets/videos/opengl-stadium.mp4" type="video/mp4">
+</video>
+
+A real-time graphics project focused on lower-level rendering, transformation mathematics and scene organisation using OpenGL.
+
+### Highlights
+
+- Custom vector and matrix maths
+- Translation, rotation and scaling transformations
+- VAOs, VBOs and EBOs
+- Indexed and non-indexed rendering
+- Vertex and fragment shaders
+- Procedural primitive geometry
+- Hierarchical scene graphs and recursive rendering
+- Visitor-pattern processing of scene-graph nodes
+
+---
+
+## Mixed Reality Bowling
+
+**Unity · C# · Meta XR · MRUK · Mixed Reality**
+
+<table>
+  <tr>
+    <th>Lane Placement</th>
+    <th>Bowling &amp; Game Loop</th>
+  </tr>
+  <tr>
+    <td>
+      <video autoplay loop muted playsinline preload="metadata" poster="assets/images/mr-bowling-lane-placement-poster.jpg" style="width:100%; height:auto;">
+        <source src="assets/videos/mr-bowling-lane-placement.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video autoplay loop muted playsinline preload="metadata" poster="assets/images/mr-bowling-strike-reset-poster.jpg" style="width:100%; height:auto;">
+        <source src="assets/videos/mr-bowling-strike-reset.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+</table>
+
+A mixed-reality bowling game developed in Unity, integrating virtual bowling gameplay with the player's scanned physical environment using Meta XR and MRUK.
+
+### Highlights
+
+- Used passthrough and MRUK scene data to integrate virtual content with the physical environment
+- Dynamically placed the bowling lane against detected floor geometry using controller raycasts
+- Implemented bowling-ball spawning, grabbing, releasing and physics-based interaction
+- Built pin spawning, knock detection, clearing and reset behaviour
+- Implemented ten-pin bowling scoring including strikes, spares and tenth-frame rules
+- Built a live scoreboard and complete frame/game reset loop
 
 ---
 
 ## Virtual Sports Hall VR
 
-**Unity | C# | Virtual Reality**
+**Unity · C# · Unity XR Interaction Toolkit**
 
-A virtual reality sports application developed using Unity XR, focused on physics-based interaction and responsive player feedback.
+A VR sports-hall project developed in Unity as assessed university work, implementing a range of XR interactions, physics-based sports mechanics and interactive environmental elements. Unity XR tutorial material was used as a foundation, which I adapted and integrated into the final application.
 
-### What I implemented
-- Developed VR grab and throw interactions
-- Implemented physics-based sports mechanics
-- Used physical materials to control object behaviour
-- Implemented dynamic haptic feedback
-- Refined interactions through testing and iteration
+<table>
+  <tr>
+    <th>Sports Interaction</th>
+    <th>Object / Socket Interaction</th>
+    <th>Interactive Environment</th>
+  </tr>
+  <tr>
+    <td>
+      <video autoplay loop muted playsinline preload="metadata" poster="assets/images/vr-tennis-poster.jpg" style="width:100%; height:auto;">
+        <source src="assets/videos/vr-tennis.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video autoplay loop muted playsinline preload="metadata" poster="assets/images/vr-hat-poster.jpg" style="width:100%; height:auto;">
+        <source src="assets/videos/vr-hat.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video autoplay loop muted playsinline preload="metadata" poster="assets/images/vr-keypad-door-poster.jpg" style="width:100%; height:auto;">
+        <source src="assets/videos/vr-keypad-door.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+</table>
 
-### Technical Areas
-`C#` `Unity` `XR` `Physics` `Haptics` `Interaction Design`
+### Experience Demonstrated
+
+- Implemented and configured grab, throw and physics-based sports interactions
+- Worked with socket-based interactions for wearable and placed objects
+- Integrated interactive environmental elements including a scanner, movable posters and a keypad-controlled door
+- Tested and refined interaction behaviour in VR
+
+---
+
+# In Progress
+
+## C++ & Real-Time Graphics — Vulkan 1.3
+
+**C++ · Vulkan 1.3 · GLSL · Software Design**
+
+Currently developing a Vulkan 1.3 real-time graphics application that combines work from my final-year C++ Programming and Design and Real-Time Graphics modules.
+
+The project applies C++ programming and software-design principles directly to lower-level graphics development, including graphics-pipeline configuration, shader integration, buffer management, model transformations, push constants and multiple draw calls.
+
+### Current Focus
+
+- Applying modern C++ design principles within a graphics codebase
+- Managing object lifetimes and resources in a low-level API
+- Configuring Vulkan 1.3 graphics pipelines
+- Working with vertex and fragment shaders
+- Using uniform buffers and push constants
+- Rendering multiple objects with independent transformations
+- Exploring different primitive topologies and rendering techniques
+
+---
+
+## Commercial Development Practice
+
+**Team Development · Customer Project · Scrum · PRINCE2**
+
+Currently working as part of a development team on a final-year commercial development project based around a customer brief.
+
+The project provides experience of working within a structured development team, managing requirements and responsibilities, communicating with a customer, and applying Scrum alongside PRINCE2 project governance.
+
+As the project develops, I will add more detail about my individual technical contribution.
 
 ---
 
 # Technical Skills
 
-## Programming Languages
+## Languages
 
-### C++
+`C++` `C#` `Rust` `Python`
 
-Experience using C++ through university programming modules and continuing development during my final-year studies.
+## Game & Graphics Technologies
 
-- Object-oriented programming
-- Classes and inheritance
-- Pointers and references
-- Stack and heap memory
-- Dynamic memory management
-- Object lifetimes
-- STL containers and vectors
-- References, ownership and memory behaviour
+`Unity` `MonoGame` `Vulkan 1.3` `OpenGL` `OpenTK` `CUDA` `GLSL`
 
-### C#
+## XR & Mixed Reality
 
-Primary language used throughout several game-development projects across Unity and MonoGame.
+`Unity XR Interaction Toolkit` `Meta XR SDK` `Meta XR MRUK` `Passthrough` `Scene Understanding`
 
-- Object-oriented programming
-- Gameplay and systems programming
-- Multiplayer networking
-- Game AI
-- Entity and collision systems
-- UI and interaction logic
+## Networking & Systems
 
-### Python
+`Netcode for GameObjects` `Unity Transport` `UDP` `Client Prediction` `Server Reconciliation` `Snapshot Interpolation`
 
-Used for algorithmic and problem-solving coursework.
+## Tools
 
-- A* pathfinding
-- Dijkstra's algorithm
-- Graph traversal and route optimisation
-- General algorithm implementation
+`Git` `GitHub` `Visual Studio` `Unity Profiler`
 
 ---
 
-# Game Development
+# Contact
 
-## MonoGame / Engine Development
-
-Experience developing games and underlying engine systems using MonoGame, working at a lower level than full game engines such as Unity.
-
-- Designed and implemented custom entity systems
-- Developed collision detection and collision response systems
-- Implemented game-loop and update/draw architecture
-- Managed entity lifecycle, updating and rendering
-- Built reusable systems for game objects and gameplay behaviour
-- Implemented finite state machine and behaviour systems
-- Developed autonomous agent movement using steering behaviours
-- Worked directly with input handling, rendering and game-state logic
-
-## OpenGL / Game Architecture
-
-Experience designing lower-level game systems and reusable engine architecture.
-
-- Designed and implemented an Entity Component System (ECS)
-- Built entity and system managers
-- Implemented collision detection and response
-- Developed scene and resource management systems
-- Implemented navigation meshes and A* pathfinding
-- Built rendering, shader, camera and audio systems
-- Separated engine-level and game-specific logic
-
-## OpenGL / Real-Time Graphics
-
-Experience implementing graphics and rendering systems directly using OpenGL/OpenTK.
-
-- Implemented custom vector and matrix maths
-- Built translation, rotation and scaling transformations
-- Implemented matrix-vector and matrix-matrix multiplication
-- Generated primitive geometry procedurally
-- Worked with VAOs, VBOs and EBOs
-- Implemented indexed and non-indexed rendering
-- Used vertex and fragment shaders
-- Applied texture coordinates and model transformations
-- Built hierarchical scene graphs with recursive rendering
-- Used the Visitor pattern to process scene-graph nodes
-
-## Unity
-
-Experience developing gameplay systems and interactive applications across multiplayer, VR and general game-development projects.
-
-- Developed gameplay mechanics and supporting game systems
-- Implemented multiplayer features using Unity networking technologies
-- Built physics-based interactions and gameplay behaviour
-- Developed VR / XR interaction systems
-- Implemented grabbing, throwing and haptic feedback
-- Created gameplay UI and menu systems
-- Used Unity Profiler to analyse runtime performance
-
-## Multiplayer Networking
-
-Experience developing and evaluating networking systems for local multiplayer games.
-
-- Implemented client-server architecture
-- Developed LAN host discovery using UDP broadcasting
-- Built multiplayer lobby and ready-up systems
-- Implemented synchronised multiplayer gameplay
-- Experimented with different network authority approaches
-- Analysed latency, bandwidth usage and runtime performance
-- Considered responsiveness and consistency when designing networked systems
-
-## Gameplay AI
-
-Experience implementing autonomous game-agent behaviour using state-based decision-making and movement systems.
-
-- Designed finite state machines for autonomous agents
-- Implemented state transitions based on gameplay conditions
-- Developed steering behaviours for autonomous movement
-- Implemented predictive movement and target selection
-- Built individual and team-level decision-making systems
-- Dynamically assigned agent roles based on the current game state
-
----
-
-# Development Tools & Workflow
-
-## Git / GitHub
-
-- Source control and version management
-- Repository management
-- Branching and commits
-- GitHub Classroom
-- Collaborative development workflows
-
-## Visual Studio
-
-- C++ and C# development
-- Breakpoint-based debugging
-- Runtime inspection
-- Project and solution management
-
-## Profiling & Debugging
-
-- Unity Profiler
-- Runtime performance analysis
-- Network performance monitoring
-- Gameplay and systems debugging
-- Investigation of performance bottlenecks
-
----
-
-# About Me
-
-I am a final-year Computer Science student at the University of Hull working towards a career as a games programmer.
-
-My university projects have given me experience across gameplay programming, multiplayer networking, game AI, engine architecture and virtual reality. I particularly enjoy working on technical gameplay systems and understanding how lower-level game systems operate.
-
-I am continuing to develop my C++ knowledge during my final year while building on my existing experience with C#, Unity and MonoGame.
-
----
+**Email:** [joshada05@hotmail.com](mailto:joshada05@hotmail.com)  
+**GitHub:** [JoshuaAdamson05](https://github.com/JoshuaAdamson05)
