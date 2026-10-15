@@ -21,7 +21,7 @@ I am currently continuing to develop my C++ and lower-level programming experien
 
 **Unity · C# · Multiplayer Networking**
 
-![Local Networked Table Football gameplay](assets/images/table-football-gameplay.gif)
+![Local Networked Table Football gameplay](assets/images/gameplay.gif)
 
 A 2D LAN multiplayer table-football game developed as my individual Honours project, focused on responsive gameplay networking and synchronisation.
 
@@ -42,7 +42,7 @@ A 2D LAN multiplayer table-football game developed as my individual Honours proj
 
 | Rust CPU | CUDA GPU |
 | --- | --- |
-| ![Rust particle simulation](assets/images/rust-particle-simulation.gif) | ![CUDA particle simulation](assets/images/cuda-particle-simulation.gif) |
+| ![Rust particle simulation](assets/images/Mass%20RUST%281%29.gif) | ![CUDA particle simulation](assets/images/Mass%20CUDA%281%29.gif) |
 
 Two implementations of the same particle shower simulation, developed to compare CPU multithreading with massively parallel GPU processing.
 
