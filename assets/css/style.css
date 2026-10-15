@@ -1,0 +1,343 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+  --bg: #0d2721;
+  --bg-deep: #081b17;
+  --panel: #12362e;
+  --panel-hover: #17463b;
+
+  --red: #c8102e;
+  --red-light: #e0193f;
+
+  --blue: #0067b1;
+  --blue-light: #1685d8;
+
+  --text: #f5f7f6;
+  --muted: #b9c8c3;
+
+  --border: rgba(255, 255, 255, 0.10);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+
+  --radius: 14px;
+}
+
+/* -----------------------------
+   Global
+----------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 103, 177, 0.10),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(200, 16, 46, 0.10),
+      transparent 28%
+    ),
+    var(--bg);
+
+  color: var(--text);
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Main content width */
+
+.wrapper,
+main,
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* -----------------------------
+   Typography
+----------------------------- */
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  margin-bottom: 0.3em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--blue-light);
+}
+
+p,
+li {
+  color: var(--text);
+}
+
+strong {
+  color: #ffffff;
+}
+
+/* -----------------------------
+   Links
+----------------------------- */
+
+a {
+  color: var(--blue-light);
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+a:hover {
+  color: var(--red-light);
+}
+
+/* -----------------------------
+   Main project headings
+----------------------------- */
+
+#featured-projects {
+  margin-top: 4rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 4px;
+  margin-top: 0.45rem;
+
+  background: linear-gradient(
+    90deg,
+    var(--red),
+    var(--blue)
+  );
+
+  border-radius: 999px;
+}
+
+/* -----------------------------
+   Horizontal separators
+----------------------------- */
+
+hr {
+  border: none;
+  height: 1px;
+  margin: 4rem 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--red),
+    var(--blue),
+    transparent
+  );
+
+  opacity: 0.55;
+}
+
+/* -----------------------------
+   Images and video
+----------------------------- */
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--radius);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow);
+
+  background: var(--bg-deep);
+}
+
+video {
+  object-fit: cover;
+}
+
+/* Slight interaction without making it flashy */
+
+video,
+img {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+video:hover,
+img:hover {
+  border-color: rgba(200, 16, 46, 0.5);
+}
+
+/* -----------------------------
+   Tables used for media
+----------------------------- */
+
+table {
+  width: 100%;
+  margin: 1.5rem 0 2rem;
+
+  border-collapse: separate;
+  border-spacing: 14px;
+
+  background: transparent;
+}
+
+table th {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+
+  background: transparent;
+  border: none;
+}
+
+table td {
+  background: var(--panel);
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  padding: 12px;
+
+  vertical-align: middle;
+}
+
+/* -----------------------------
+   Lists / project highlights
+----------------------------- */
+
+ul {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin: 0.45rem 0;
+}
+
+li::marker {
+  color: var(--red);
+}
+
+/* -----------------------------
+   Code / technology labels
+----------------------------- */
+
+code {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  background: rgba(0, 103, 177, 0.18);
+
+  border: 1px solid rgba(0, 103, 177, 0.35);
+
+  border-radius: 999px;
+
+  padding: 0.18rem 0.55rem;
+}
+
+/* -----------------------------
+   Selection colour
+----------------------------- */
+
+::selection {
+  background: var(--red);
+  color: white;
+}
+
+/* -----------------------------
+   Scrollbar
+----------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+
+/* -----------------------------
+   Mobile
+----------------------------- */
+
+@media (max-width: 720px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  table,
+  tbody,
+  tr,
+  td,
+  th {
+    display: block;
+    width: 100%;
+  }
+
+  table {
+    border-spacing: 0;
+  }
+
+  table th {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  table td {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+}
