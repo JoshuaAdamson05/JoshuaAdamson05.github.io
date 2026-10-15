@@ -1,287 +1,428 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+/* =========================================================
+   COLOURS
+   ========================================================= */
 
 :root {
-  --bg: #0d2721;
-  --bg-deep: #081b17;
-  --panel: #12362e;
-  --panel-hover: #17463b;
+  /* Liverpool third-kit inspired dark green */
+  --bg: #0b241e;
+  --bg-deep: #071914;
+  --panel: #102f28;
+  --panel-light: #153b32;
 
+  /* Liverpool red */
   --red: #c8102e;
-  --red-light: #e0193f;
+  --red-light: #e31b3d;
 
+  /* Superman-style royal blue */
   --blue: #0067b1;
-  --blue-light: #1685d8;
+  --blue-light: #2491df;
 
+  /* Text */
   --text: #f5f7f6;
-  --muted: #b9c8c3;
+  --text-soft: #d7dfdc;
+  --muted: #aebbb7;
 
-  --border: rgba(255, 255, 255, 0.10);
+  --border: rgba(255, 255, 255, 0.11);
+  --border-strong: rgba(255, 255, 255, 0.18);
 
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  --shadow: 0 12px 35px rgba(0, 0, 0, 0.32);
 
   --radius: 14px;
+  --content-width: 1100px;
 }
 
-/* -----------------------------
-   Global
------------------------------ */
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg-deep);
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
+
   background:
     radial-gradient(
-      circle at top right,
-      rgba(0, 103, 177, 0.10),
-      transparent 32%
+      circle at 90% 4%,
+      rgba(0, 103, 177, 0.13),
+      transparent 28rem
     ),
     radial-gradient(
-      circle at top left,
-      rgba(200, 16, 46, 0.10),
-      transparent 28%
+      circle at 7% 8%,
+      rgba(200, 16, 46, 0.11),
+      transparent 26rem
     ),
-    var(--bg);
+    linear-gradient(
+      180deg,
+      var(--bg) 0%,
+      var(--bg-deep) 100%
+    );
+
+  background-attachment: fixed;
 
   color: var(--text);
+
   font-family: "Nunito", sans-serif;
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.7;
 }
 
-/* Main content width */
+/* =========================================================
+   REMOVE CAYMAN'S GENERATED HEADER / FOOTER
 
-.wrapper,
-main,
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
+   The actual portfolio heading and contact information already
+   exist inside index.md, so these would otherwise be duplicated.
+   ========================================================= */
+
+.page-header {
+  display: none;
 }
 
-/* -----------------------------
-   Typography
------------------------------ */
+.site-footer {
+  display: none;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main-content {
+  width: min(var(--content-width), calc(100% - 48px));
+  max-width: var(--content-width);
+
+  margin: 0 auto;
+  padding: 70px 0 90px;
+
+  color: var(--text);
+}
+
+/* Make sure Cayman cannot colour text green */
+
+.main-content p,
+.main-content li,
+.main-content strong,
+.main-content em,
+.main-content td,
+.main-content th {
+  color: var(--text);
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
 
 h1,
 h2 {
   font-family: "Playfair Display", serif;
   color: var(--text);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 h1 {
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  line-height: 1.05;
-  margin-bottom: 0.3em;
+  margin: 0 0 0.15em;
+
+  font-size: clamp(3.4rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+
+  color: #ffffff;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
   margin-bottom: 1rem;
+
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 h3 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.75rem;
+
   font-family: "Nunito", sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 800;
+
+  /* Blue only — never green */
   color: var(--blue-light);
 }
 
-p,
-li {
-  color: var(--text);
+p {
+  margin-top: 0;
+  margin-bottom: 1.15rem;
+
+  color: var(--text-soft);
 }
 
 strong {
   color: #ffffff;
+  font-weight: 800;
 }
 
-/* -----------------------------
-   Links
------------------------------ */
+/* Graduate Games Programmer subtitle */
 
-a {
-  color: var(--blue-light);
-  text-decoration: none;
+h1 + h2 {
+  margin-top: 0.35rem;
+  margin-bottom: 2rem;
+
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
   font-weight: 700;
-  transition:
-    color 0.2s ease,
-    opacity 0.2s ease;
-}
 
-a:hover {
   color: var(--red-light);
 }
 
-/* -----------------------------
-   Main project headings
------------------------------ */
-
-#featured-projects {
-  margin-top: 4rem;
-}
+/* =========================================================
+   SECTION ACCENT
+   ========================================================= */
 
 h2::after {
   content: "";
-  display: block;
-  width: 75px;
-  height: 4px;
-  margin-top: 0.45rem;
 
-  background: linear-gradient(
-    90deg,
-    var(--red),
-    var(--blue)
-  );
+  display: block;
+
+  width: 82px;
+  height: 4px;
+
+  margin-top: 0.55rem;
 
   border-radius: 999px;
-}
-
-/* -----------------------------
-   Horizontal separators
------------------------------ */
-
-hr {
-  border: none;
-  height: 1px;
-  margin: 4rem 0;
 
   background: linear-gradient(
     90deg,
-    transparent,
-    var(--red),
-    var(--blue),
-    transparent
+    var(--red) 0%,
+    var(--red) 48%,
+    var(--blue) 52%,
+    var(--blue) 100%
   );
-
-  opacity: 0.55;
 }
 
-/* -----------------------------
-   Images and video
------------------------------ */
+/* Don't put the accent underneath the subtitle */
+
+h1 + h2::after {
+  display: none;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: var(--blue-light);
+
+  font-weight: 700;
+
+  text-decoration: none;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+
+  transition:
+    color 0.18s ease,
+    text-decoration-color 0.18s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--red-light);
+  text-decoration: underline;
+}
+
+/* =========================================================
+   DIVIDERS
+   ========================================================= */
+
+hr {
+  height: 1px;
+
+  margin: 4.5rem 0;
+
+  border: 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(200, 16, 46, 0.8) 25%,
+    rgba(0, 103, 177, 0.8) 75%,
+    transparent 100%
+  );
+}
+
+/* =========================================================
+   IMAGES / VIDEOS
+   ========================================================= */
 
 img,
 video {
   display: block;
+
   max-width: 100%;
-  border-radius: var(--radius);
+  height: auto;
 
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background: var(--bg-deep);
 
   box-shadow: var(--shadow);
 
-  background: var(--bg-deep);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 video {
+  width: 100%;
   object-fit: cover;
 }
 
-/* Slight interaction without making it flashy */
+img:hover,
+video:hover {
+  border-color: rgba(36, 145, 223, 0.55);
 
-video,
-img {
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(36, 145, 223, 0.08);
 }
 
-video:hover,
-img:hover {
-  border-color: rgba(200, 16, 46, 0.5);
-}
-
-/* -----------------------------
-   Tables used for media
------------------------------ */
+/* =========================================================
+   TABLES
+   ========================================================= */
 
 table {
   width: 100%;
+
   margin: 1.5rem 0 2rem;
 
   border-collapse: separate;
-  border-spacing: 14px;
+  border-spacing: 8px;
 
   background: transparent;
 }
 
-table th {
+th {
+  padding: 10px 12px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #ffffff;
+
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  color: var(--text);
   text-align: center;
-
-  background: transparent;
-  border: none;
 }
 
-table td {
-  background: var(--panel);
+td {
+  padding: 12px;
+
   border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background: rgba(16, 47, 40, 0.82);
+
+  color: var(--text-soft);
+}
+
+/* Media tables */
+
+table:has(video) td,
+table:has(img) td {
+  padding: 10px;
 
   border-radius: var(--radius);
 
-  padding: 12px;
+  background: var(--panel);
 
   vertical-align: middle;
 }
 
-/* -----------------------------
-   Lists / project highlights
------------------------------ */
+table:has(video) img,
+table:has(video) video,
+table:has(img) img,
+table:has(img) video {
+  width: 100%;
+}
 
-ul {
-  padding-left: 1.4rem;
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+ul,
+ol {
+  padding-left: 1.5rem;
 }
 
 li {
   margin: 0.45rem 0;
+
+  color: var(--text-soft);
 }
 
 li::marker {
-  color: var(--red);
+  color: var(--red-light);
 }
 
-/* -----------------------------
-   Code / technology labels
------------------------------ */
+/* =========================================================
+   TECH / SKILL BADGES
+   ========================================================= */
 
 code {
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  display: inline-block;
+
+  margin: 0.12rem 0.1rem;
+  padding: 0.18rem 0.62rem;
+
+  border: 1px solid rgba(36, 145, 223, 0.4);
+  border-radius: 999px;
+
+  background: rgba(0, 103, 177, 0.16);
 
   color: #ffffff;
 
-  background: rgba(0, 103, 177, 0.18);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
 
-  border: 1px solid rgba(0, 103, 177, 0.35);
-
-  border-radius: 999px;
-
-  padding: 0.18rem 0.55rem;
+  white-space: nowrap;
 }
 
-/* -----------------------------
-   Selection colour
------------------------------ */
+/* =========================================================
+   ABOUT / INTRO SECTION
+   ========================================================= */
+
+.main-content > h3:first-of-type {
+  margin-top: 2.5rem;
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
 
 ::selection {
   background: var(--red);
-  color: white;
+  color: #ffffff;
 }
 
-/* -----------------------------
-   Scrollbar
------------------------------ */
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -292,52 +433,106 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--red);
+  border: 2px solid var(--bg-deep);
   border-radius: 999px;
+
+  background: var(--red);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--blue);
 }
 
-/* -----------------------------
-   Mobile
------------------------------ */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-@media (max-width: 720px) {
+@media (max-width: 800px) {
+  body {
+    font-size: 17px;
+  }
 
+  .main-content {
+    width: min(100% - 32px, var(--content-width));
+
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  hr {
+    margin: 3.5rem 0;
+  }
+
+  /*
+     Only media tables stack vertically.
+     Normal data tables, such as the Rust/CUDA performance
+     comparison, remain proper tables.
+  */
+
+  table:has(video),
+  table:has(img),
+  table:has(video) tbody,
+  table:has(img) tbody,
+  table:has(video) tr,
+  table:has(img) tr {
+    display: block;
+
+    width: 100%;
+  }
+
+  table:has(video) th,
+  table:has(img) th,
+  table:has(video) td,
+  table:has(img) td {
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 12px;
+  }
+
+  /*
+     Hide media-table column headings on mobile because
+     once stacked they no longer sit directly above each item.
+  */
+
+  table:has(video) th,
+  table:has(img) th {
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 520px) {
   body {
     font-size: 16px;
   }
 
+  .main-content {
+    width: calc(100% - 24px);
+  }
+
   h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
-  h2 {
-    font-size: 2rem;
+  h3 {
+    font-size: 1.2rem;
   }
 
-  table,
-  tbody,
-  tr,
-  td,
-  th {
-    display: block;
-    width: 100%;
+  table:not(:has(video)):not(:has(img)) {
+    font-size: 0.88rem;
   }
 
-  table {
-    border-spacing: 0;
-  }
-
-  table th {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  table td {
-    margin-bottom: 1rem;
-    box-sizing: border-box;
+  table:not(:has(video)):not(:has(img)) th,
+  table:not(:has(video)):not(:has(img)) td {
+    padding: 7px;
   }
 }
