@@ -3,41 +3,39 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap');
 
-/* =========================================================
-   COLOURS
-   ========================================================= */
-
 :root {
-  /* Liverpool third-kit inspired dark green */
-  --bg: #0b241e;
-  --bg-deep: #071914;
-  --panel: #102f28;
-  --panel-light: #153b32;
+  /* Liverpool 25/26 third-kit inspired sea green */
+  --bg: #5fae96;
+  --bg-deep: #4d987f;
+
+  /* Dark content surfaces */
+  --panel: #11191c;
+  --panel-light: #182327;
 
   /* Liverpool red */
   --red: #c8102e;
   --red-light: #e31b3d;
 
-  /* Superman-style royal blue */
+  /* Superman-style blue */
   --blue: #0067b1;
   --blue-light: #2491df;
 
   /* Text */
-  --text: #f5f7f6;
-  --text-soft: #d7dfdc;
-  --muted: #aebbb7;
+  --text: #f7f8f8;
+  --text-soft: #d9dede;
+  --muted: #abb5b5;
 
-  --border: rgba(255, 255, 255, 0.11);
-  --border-strong: rgba(255, 255, 255, 0.18);
+  --border: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.2);
 
-  --shadow: 0 12px 35px rgba(0, 0, 0, 0.32);
+  --shadow: 0 16px 45px rgba(0, 0, 0, 0.34);
 
   --radius: 14px;
   --content-width: 1100px;
 }
 
 /* =========================================================
-   RESET / BASE
+   BASE
    ========================================================= */
 
 * {
@@ -46,7 +44,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--bg-deep);
+  background: var(--bg);
 }
 
 body {
@@ -54,23 +52,16 @@ body {
   min-height: 100vh;
 
   background:
-    radial-gradient(
-      circle at 90% 4%,
-      rgba(0, 103, 177, 0.13),
-      transparent 28rem
-    ),
-    radial-gradient(
-      circle at 7% 8%,
-      rgba(200, 16, 46, 0.11),
-      transparent 26rem
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      transparent 42%
     ),
     linear-gradient(
       180deg,
       var(--bg) 0%,
       var(--bg-deep) 100%
     );
-
-  background-attachment: fixed;
 
   color: var(--text);
 
@@ -81,10 +72,7 @@ body {
 }
 
 /* =========================================================
-   REMOVE CAYMAN'S GENERATED HEADER / FOOTER
-
-   The actual portfolio heading and contact information already
-   exist inside index.md, so these would otherwise be duplicated.
+   REMOVE CAYMAN GENERATED ELEMENTS
    ========================================================= */
 
 .page-header {
@@ -96,6 +84,52 @@ body {
 }
 
 /* =========================================================
+   ACCESSIBILITY SKIP LINK
+   ========================================================= */
+
+#skip-to-content {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+
+  border: 0;
+}
+
+#skip-to-content:focus {
+  position: fixed;
+
+  top: 12px;
+  left: 12px;
+
+  width: auto;
+  height: auto;
+
+  margin: 0;
+  padding: 10px 16px;
+
+  overflow: visible;
+  clip: auto;
+
+  z-index: 9999;
+
+  background: #ffffff;
+  color: #111111;
+
+  border-radius: 8px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
    MAIN CONTENT
    ========================================================= */
 
@@ -103,13 +137,23 @@ body {
   width: min(var(--content-width), calc(100% - 48px));
   max-width: var(--content-width);
 
-  margin: 0 auto;
-  padding: 70px 0 90px;
+  margin: 42px auto 64px;
+  padding: 58px 62px 78px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(24, 35, 39, 0.98),
+      rgba(12, 18, 21, 0.98)
+    );
+
+  border: 1px solid var(--border);
+  border-radius: 22px;
+
+  box-shadow: var(--shadow);
 
   color: var(--text);
 }
-
-/* Make sure Cayman cannot colour text green */
 
 .main-content p,
 .main-content li,
@@ -158,7 +202,6 @@ h3 {
   font-size: 1.3rem;
   font-weight: 800;
 
-  /* Blue only — never green */
   color: var(--blue-light);
 }
 
@@ -188,7 +231,7 @@ h1 + h2 {
 }
 
 /* =========================================================
-   SECTION ACCENT
+   HEADING ACCENTS
    ========================================================= */
 
 h2::after {
@@ -211,8 +254,6 @@ h2::after {
     var(--blue) 100%
   );
 }
-
-/* Don't put the accent underneath the subtitle */
 
 h1 + h2::after {
   display: none;
@@ -276,9 +317,9 @@ video {
   border: 1px solid var(--border);
   border-radius: var(--radius);
 
-  background: var(--bg-deep);
+  background: #0a0f11;
 
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
 
   transition:
     border-color 0.2s ease,
@@ -335,7 +376,7 @@ td {
   border: 1px solid var(--border);
   border-radius: 10px;
 
-  background: rgba(16, 47, 40, 0.82);
+  background: var(--panel-light);
 
   color: var(--text-soft);
 }
@@ -404,14 +445,6 @@ code {
 }
 
 /* =========================================================
-   ABOUT / INTRO SECTION
-   ========================================================= */
-
-.main-content > h3:first-of-type {
-  margin-top: 2.5rem;
-}
-
-/* =========================================================
    SELECTION
    ========================================================= */
 
@@ -429,11 +462,11 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-deep);
+  background: #0c1215;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid var(--bg-deep);
+  border: 2px solid #0c1215;
   border-radius: 999px;
 
   background: var(--red);
@@ -453,10 +486,12 @@ code {
   }
 
   .main-content {
-    width: min(100% - 32px, var(--content-width));
+    width: calc(100% - 20px);
 
-    padding-top: 45px;
-    padding-bottom: 60px;
+    margin: 10px auto 30px;
+    padding: 35px 20px 50px;
+
+    border-radius: 14px;
   }
 
   h1 {
@@ -470,12 +505,6 @@ code {
   hr {
     margin: 3.5rem 0;
   }
-
-  /*
-     Only media tables stack vertically.
-     Normal data tables, such as the Rust/CUDA performance
-     comparison, remain proper tables.
-  */
 
   table:has(video),
   table:has(img),
@@ -498,16 +527,6 @@ code {
 
     margin-bottom: 12px;
   }
-
-  /*
-     Hide media-table column headings on mobile because
-     once stacked they no longer sit directly above each item.
-  */
-
-  table:has(video) th,
-  table:has(img) th {
-    padding-bottom: 4px;
-  }
 }
 
 @media (max-width: 520px) {
@@ -516,7 +535,10 @@ code {
   }
 
   .main-content {
-    width: calc(100% - 24px);
+    width: calc(100% - 16px);
+
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   h1 {
