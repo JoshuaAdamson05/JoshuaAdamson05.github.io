@@ -42,7 +42,7 @@ A 2D LAN multiplayer table-football game developed as my individual Honours proj
 
 | Rust CPU | CUDA GPU |
 | --- | --- |
-| ![Rust particle simulation](assets/images/Mass%20RUST%281%29.gif) | ![CUDA particle simulation](assets/images/Mass%20CUDA%281%29.gif) |
+| ![Rust particle simulation](assets/images/Mass%20RUST.gif) | ![CUDA particle simulation](assets/images/Mass%20CUDA.gif) |
 
 Two implementations of the same particle shower simulation, developed to compare CPU multithreading with massively parallel GPU processing.
 
