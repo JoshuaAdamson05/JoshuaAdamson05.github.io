@@ -42,9 +42,22 @@ A 2D LAN multiplayer table-football game developed as my individual Honours proj
 
 **Rust · C++ · CUDA · OpenGL · Parallel Programming**
 
-| Rust CPU | CUDA GPU |
-| --- | --- |
-| ![Rust particle simulation](assets/images/Mass%20RUST.gif) | ![CUDA particle simulation](assets/images/Mass%20CUDA.gif) |**[View Rust Source Code & Documentation](https://github.com/JoshuaAdamson05/RustShowerSimulation)** | **[View CUDA Source Code & Documentation](https://github.com/JoshuaAdamson05/CUDAShowerSimulation)**|
+<div class="particle-project-grid">
+  <section class="particle-project-card" aria-labelledby="rust-particle-title">
+    <h3 id="rust-particle-title">Rust CPU</h3>
+    <div class="particle-project-preview">
+      <img src="assets/images/Mass%20RUST.gif" alt="Rust CPU particle shower simulation showing particle mass visualisation" loading="lazy">
+    </div>
+    <a class="particle-project-link" href="https://github.com/JoshuaAdamson05/RustShowerSimulation">View Rust Source Code &amp; Documentation</a>
+  </section>
+  <section class="particle-project-card" aria-labelledby="cuda-particle-title">
+    <h3 id="cuda-particle-title">CUDA GPU</h3>
+    <div class="particle-project-preview">
+      <img src="assets/images/Mass%20CUDA.gif" alt="CUDA GPU particle shower simulation showing particle mass visualisation" loading="lazy">
+    </div>
+    <a class="particle-project-link" href="https://github.com/JoshuaAdamson05/CUDAShowerSimulation">View CUDA Source Code &amp; Documentation</a>
+  </section>
+</div>
 
 Two implementations of the same particle shower simulation, developed to compare CPU multithreading with massively parallel GPU processing.
 
