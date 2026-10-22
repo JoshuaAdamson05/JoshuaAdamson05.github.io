@@ -25,6 +25,8 @@ I am currently continuing to develop my C++ and lower-level programming experien
 
 A 2D LAN multiplayer table-football game developed as my individual Honours project, focused on responsive gameplay networking and synchronisation.
 
+**[View Source Code & Technical Documentation](https://github.com/JoshuaAdamson05/Local-Networked-Table-Football-Game)**
+
 ### Highlights
 
 - Custom **30 Hz tick-based networking system**
